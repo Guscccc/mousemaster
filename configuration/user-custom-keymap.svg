@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 590" role="img" aria-labelledby="title desc">
+  <title>User custom key map</title>
+  <desc>Vector keyboard map for the user-custom mousemaster configuration.</desc>
+  <style>
+    .bg { fill: #232323; }
+    .frame { fill: #1a1a1a; stroke: #686157; stroke-width: 3; }
+    .key { stroke: #7f7668; stroke-width: 3; }
+    .dark { fill: #191919; }
+    .purple { fill: #6c2eb9; }
+    .blue { fill: #26369d; }
+    .red { fill: #b0291f; }
+    .teal { fill: #3199a5; }
+    .green { fill: #6b9b43; }
+    .yellow { fill: #b1a400; }
+    .pink { fill: #b12a73; }
+    .orange { fill: #a15e19; }
+    .phys { font: 22px "Segoe UI", Arial, sans-serif; fill: #f3f3f3; }
+    .phys-dark { font: 22px "Segoe UI", Arial, sans-serif; fill: #f6f6f6; opacity: 0.95; }
+    .func { font: 25px "Segoe UI", Arial, sans-serif; fill: #f5f5f5; }
+    .func-small { font: 20px "Segoe UI", Arial, sans-serif; fill: #f5f5f5; }
+    .func-tiny { font: 16px "Segoe UI", Arial, sans-serif; fill: #f5f5f5; }
+    .alt { font: 14px "Segoe UI", Arial, sans-serif; fill: #f7e77a; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1580" height="590"/>
+  <rect class="frame" x="10" y="10" width="1560" height="576"/>
+
+  <!-- Row 1 -->
+  <g transform="translate(28 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">~</text><text class="phys-dark" x="12" y="68">`</text></g>
+  <g transform="translate(130 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">1</text><text class="phys-dark" x="12" y="68">!</text></g>
+  <g transform="translate(232 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">2</text><text class="phys-dark" x="12" y="68">@</text></g>
+  <g transform="translate(334 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">3</text><text class="phys-dark" x="12" y="68">#</text></g>
+  <g transform="translate(436 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">4</text><text class="phys-dark" x="12" y="68">$</text></g>
+  <g transform="translate(538 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">5</text><text class="phys-dark" x="12" y="68">%</text></g>
+  <g transform="translate(640 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">6</text><text class="phys-dark" x="12" y="68">^</text></g>
+  <g transform="translate(742 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">7</text><text class="phys-dark" x="12" y="68">&amp;</text></g>
+  <g transform="translate(844 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">8</text><text class="phys-dark" x="12" y="68">*</text></g>
+  <g transform="translate(946 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">9</text><text class="phys-dark" x="12" y="68">(</text></g>
+  <g transform="translate(1048 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">0</text><text class="phys-dark" x="12" y="68">)</text></g>
+  <g transform="translate(1150 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">-</text><text class="phys-dark" x="12" y="68">_</text></g>
+  <g transform="translate(1252 26)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">=</text><text class="phys-dark" x="12" y="68">+</text></g>
+  <g transform="translate(1354 26)"><rect class="key dark" width="164" height="96"/><text class="phys-dark" x="12" y="28">Backspace</text></g>
+
+  <!-- Row 2 -->
+  <g transform="translate(28 130)"><rect class="key red" width="126" height="96"/><text class="phys" x="12" y="26">Tab</text><text class="func-small" x="12" y="52">Fast</text><text class="func-tiny" x="12" y="72">Mouse/Wheel</text><text class="alt" x="12" y="90">Alt/Win: switch</text></g>
+  <g transform="translate(160 130)"><rect class="key purple" width="96" height="96"/><text class="phys" x="12" y="28">Q</text><text class="func" x="12" y="62">Disable</text></g>
+  <g transform="translate(262 130)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="26">W</text><text class="func-small" x="12" y="52">Mouse</text><text class="func-tiny" x="12" y="72">Up</text></g>
+  <g transform="translate(364 130)"><rect class="key purple" width="96" height="96"/><text class="phys" x="12" y="26">E</text><text class="func-small" x="12" y="52">Enable</text><text class="func-tiny" x="12" y="72">Exit</text><text class="alt" x="12" y="90">with Alt</text></g>
+  <g transform="translate(466 130)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">R</text></g>
+  <g transform="translate(568 130)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">T</text></g>
+  <g transform="translate(670 130)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="28">Y</text><text class="func-small" x="12" y="60">Navigate</text><text class="func-tiny" x="12" y="80">Forward</text></g>
+  <g transform="translate(772 130)"><rect class="key teal" width="96" height="96"/><text class="phys" x="12" y="28">U</text><text class="func-small" x="12" y="60">Wheel</text><text class="func-tiny" x="12" y="80">Left</text></g>
+  <g transform="translate(874 130)"><rect class="key purple" width="96" height="96"/><text class="phys" x="12" y="26">I</text><text class="func-small" x="12" y="56">Disable</text><text class="alt" x="12" y="88">Alt: ↑</text></g>
+  <g transform="translate(976 130)"><rect class="key teal" width="96" height="96"/><text class="phys" x="12" y="28">O</text><text class="func-small" x="12" y="60">Wheel</text><text class="func-tiny" x="12" y="80">Right</text></g>
+  <g transform="translate(1078 130)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">P</text><text class="func-small" x="12" y="58">Mouse</text><text class="func-tiny" x="12" y="78">Wheel Fast</text></g>
+  <g transform="translate(1180 130)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">[</text><text class="phys-dark" x="12" y="68">{</text></g>
+  <g transform="translate(1282 130)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">]</text><text class="phys-dark" x="12" y="68">}</text></g>
+  <g transform="translate(1384 130)"><rect class="key dark" width="164" height="96"/><text class="phys-dark" x="12" y="28">\</text><text class="phys-dark" x="12" y="68">|</text></g>
+
+  <!-- Row 3 -->
+  <g transform="translate(28 234)"><rect class="key purple" width="144" height="96"/><text class="phys" x="12" y="26">Caps Lock</text><text class="func-small" x="12" y="52">Slow</text><text class="func-tiny" x="12" y="72">Enable/Exit</text><text class="alt" x="12" y="90">with Alt</text></g>
+  <g transform="translate(178 234)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="26">A</text><text class="func-small" x="12" y="52">Mouse</text><text class="func-tiny" x="12" y="72">Left</text></g>
+  <g transform="translate(280 234)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="26">S</text><text class="func-small" x="12" y="52">Mouse</text><text class="func-tiny" x="12" y="72">Down</text></g>
+  <g transform="translate(382 234)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="26">D</text><text class="func-small" x="12" y="52">Mouse</text><text class="func-tiny" x="12" y="72">Right</text></g>
+  <g transform="translate(484 234)"><rect class="key yellow" width="96" height="96"/><text class="phys" x="12" y="26">F</text><text class="func" x="12" y="58">Hints</text><text class="alt" x="12" y="88">Alt: UI</text></g>
+  <g transform="translate(586 234)"><rect class="key yellow" width="96" height="96"/><text class="phys" x="12" y="26">G</text><text class="func" x="12" y="58">Grid</text><text class="alt" x="12" y="88">Shift+G</text></g>
+  <g transform="translate(688 234)"><rect class="key blue" width="96" height="96"/><text class="phys" x="12" y="28">H</text><text class="func-small" x="12" y="60">Navigate</text><text class="func-tiny" x="12" y="80">Back</text></g>
+  <g transform="translate(790 234)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="26">J</text><text class="func-small" x="12" y="52">Click</text><text class="func-tiny" x="12" y="72">Left</text><text class="alt" x="12" y="90">Alt: ←</text></g>
+  <g transform="translate(892 234)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="26">K</text><text class="func-small" x="12" y="52">Click</text><text class="func-tiny" x="12" y="72">Middle</text><text class="alt" x="12" y="90">Alt: ↓</text></g>
+  <g transform="translate(994 234)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="26">L</text><text class="func-small" x="12" y="52">Click</text><text class="func-tiny" x="12" y="72">Right</text><text class="alt" x="12" y="90">Alt: →</text></g>
+  <g transform="translate(1096 234)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">;</text><text class="func" x="12" y="62">Slow</text></g>
+  <g transform="translate(1198 234)"><rect class="key orange" width="96" height="96"/><text class="phys" x="12" y="28">'</text><text class="func" x="12" y="62">Jump</text></g>
+  <g transform="translate(1300 234)"><rect class="key dark" width="248" height="96"/><text class="phys-dark" x="12" y="28">Enter</text></g>
+
+  <!-- Row 4 -->
+  <g transform="translate(28 338)"><rect class="key red" width="170" height="96"/><text class="phys" x="12" y="26">Shift</text><text class="func-small" x="12" y="52">Super</text><text class="func-tiny" x="12" y="72">Slow</text><text class="alt" x="12" y="90">+G window</text></g>
+  <g transform="translate(204 338)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">Z</text></g>
+  <g transform="translate(306 338)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">X</text></g>
+  <g transform="translate(408 338)"><rect class="key yellow" width="96" height="96"/><text class="phys" x="12" y="28">C</text><text class="func-small" x="12" y="60">Screen</text><text class="func-tiny" x="12" y="80">Select</text></g>
+  <g transform="translate(510 338)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">V</text><text class="func-small" x="12" y="58">Mouse</text><text class="func-tiny" x="12" y="78">Wheel Fast</text></g>
+  <g transform="translate(612 338)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">B</text><text class="func-small" x="12" y="58">Mouse</text><text class="func-tiny" x="12" y="78">Wheel Fast</text></g>
+  <g transform="translate(714 338)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="28">N</text><text class="func-small" x="12" y="60">Toggle</text><text class="func-tiny" x="12" y="80">LClick</text></g>
+  <g transform="translate(816 338)"><rect class="key teal" width="96" height="96"/><text class="phys" x="12" y="28">M</text><text class="func-small" x="12" y="60">Wheel</text><text class="func-tiny" x="12" y="80">Down</text></g>
+  <g transform="translate(918 338)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="26">,</text><text class="func-small" x="12" y="52">Click</text><text class="func-tiny" x="12" y="72">Then</text><text class="func-tiny" x="12" y="90">Disable</text></g>
+  <g transform="translate(1020 338)"><rect class="key teal" width="96" height="96"/><text class="phys" x="12" y="28">.</text><text class="func-small" x="12" y="60">Wheel</text><text class="func-tiny" x="12" y="80">Up</text></g>
+  <g transform="translate(1122 338)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">/</text><text class="func-small" x="12" y="60">Super</text><text class="func-tiny" x="12" y="80">Slow</text></g>
+  <g transform="translate(1224 338)"><rect class="key red" width="324" height="96"/><text class="phys" x="12" y="26">Shift</text><text class="func-small" x="12" y="52">Slow</text><text class="func-tiny" x="12" y="72">Mouse/Wheel</text><text class="alt" x="12" y="90">+G window</text></g>
+
+  <!-- Row 5 -->
+  <g transform="translate(28 442)"><rect class="key green" width="116" height="96"/><text class="phys" x="12" y="26">Ctrl</text><text class="func-small" x="12" y="52">Ctrl</text><text class="func-tiny" x="12" y="72">Click</text></g>
+  <g transform="translate(150 442)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">Win</text></g>
+  <g transform="translate(252 442)"><rect class="key purple" width="116" height="96"/><text class="phys" x="12" y="26">Alt</text><text class="func-small" x="12" y="52">Enable</text><text class="func-tiny" x="12" y="72">Exit</text><text class="alt" x="12" y="90">arrows/UI</text></g>
+  <g transform="translate(374 442)"><rect class="key dark" width="662" height="96"/><text class="phys-dark" x="12" y="28">Space</text></g>
+  <g transform="translate(1042 442)"><rect class="key purple" width="116" height="96"/><text class="phys" x="12" y="26">Alt</text><text class="func-small" x="12" y="52">Enable</text><text class="func-tiny" x="12" y="72">Exit</text><text class="alt" x="12" y="90">arrows/UI</text></g>
+  <g transform="translate(1164 442)"><rect class="key dark" width="96" height="96"/><text class="phys-dark" x="12" y="28">Win</text></g>
+  <g transform="translate(1266 442)"><rect class="key green" width="116" height="96"/><text class="phys" x="12" y="26">Ctrl</text><text class="func-small" x="12" y="52">Ctrl</text><text class="func-tiny" x="12" y="72">Click</text></g>
+  <text class="alt" x="28" y="570">Other exits: F2, F3</text>
+</svg>
