@@ -84,7 +84,7 @@
   <g transform="translate(918 338)"><rect class="key green" width="96" height="96"/><text class="phys" x="12" y="26">,</text><text class="func-small" x="12" y="52">Click</text><text class="func-tiny" x="12" y="72">Then</text><text class="func-tiny" x="12" y="90">Disable</text></g>
   <g transform="translate(1020 338)"><rect class="key teal" width="96" height="96"/><text class="phys" x="12" y="28">.</text><text class="func-small" x="12" y="60">Wheel</text><text class="func-tiny" x="12" y="80">Up</text></g>
   <g transform="translate(1122 338)"><rect class="key red" width="96" height="96"/><text class="phys" x="12" y="28">/</text><text class="func-small" x="12" y="60">Super</text><text class="func-tiny" x="12" y="80">Slow</text></g>
-  <g transform="translate(1224 338)"><rect class="key red" width="324" height="96"/><text class="phys" x="12" y="26">Shift</text><text class="func-small" x="12" y="52">Slow</text><text class="func-tiny" x="12" y="72">Mouse/Wheel</text><text class="alt" x="12" y="90">+G window</text></g>
+  <g transform="translate(1224 338)"><rect class="key red" width="324" height="96"/><text class="phys" x="12" y="26">Shift</text><text class="func-small" x="12" y="52">Super</text><text class="func-tiny" x="12" y="72">Slow</text><text class="alt" x="12" y="90">+G window</text></g>
 
   <!-- Row 5 -->
   <g transform="translate(28 442)"><rect class="key green" width="116" height="96"/><text class="phys" x="12" y="26">Ctrl</text><text class="func-small" x="12" y="52">Ctrl</text><text class="func-tiny" x="12" y="72">Click</text></g>

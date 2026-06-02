@@ -18,8 +18,8 @@
 - Left click then deactivate with _,_.
 - Scroll vertically or horizontally (wheel) with _m_, _._, _u_, _o_.
 - Jump forward (teleport) by holding _'_ while moving.
-- Slow down mouse and scroll movement by holding _capslock_, _rightshift_, or _;_ while moving.
-- Super slow down mouse and scroll movement by holding _leftshift_ or _/_ while moving.
+- Slow down mouse and scroll movement by holding _capslock_ or _;_ while moving.
+- Super slow down mouse and scroll movement by holding _shift_ or _/_ while moving.
 - Accelerate mouse and scroll movement by holding _tab_, _p_, _v_, or _b_. _Ctrl_ shortcuts, _Alt + Tab_, and _Win + Tab_ are passed through.
 
 ## Key remappings
