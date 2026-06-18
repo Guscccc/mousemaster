@@ -1,6 +1,7 @@
 package mousemaster;
 
 import com.sun.jna.platform.win32.User32;
+import com.sun.jna.platform.win32.BaseTSD;
 import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinUser;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import java.util.*;
 public class WindowsKeyboard {
 
     private static final Logger logger = LoggerFactory.getLogger(WindowsKeyboard.class);
+    private static final long SEND_INPUT_EXTRA_INFO = 0x4D4D4B42L; // MMKB
 
     /**
      * https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input
@@ -46,6 +48,15 @@ public class WindowsKeyboard {
         durationUntilNextKeyPressRepeat = 0;
         repeatStartedDuringCurrentTick = false;
         suppressExternalLeftalt = false;
+    }
+
+    public static boolean isMousemasterSendInput(WinUser.KBDLLHOOKSTRUCT info) {
+        return info.dwExtraInfo != null &&
+               info.dwExtraInfo.longValue() == SEND_INPUT_EXTRA_INFO;
+    }
+
+    private static BaseTSD.ULONG_PTR sendInputExtraInfo() {
+        return new BaseTSD.ULONG_PTR(SEND_INPUT_EXTRA_INFO);
     }
 
     /**
@@ -327,6 +338,7 @@ public class WindowsKeyboard {
             // If KEYEVENTF_EXTENDEDKEY dwFlag is not set,
             // rightalt + f7 in IntelliJ gets stuck: it expects alt to be released (press-and-release leftalt to unstuck).
             pInputs[moveIndex].input.ki.dwFlags = new WinDef.DWORD(flag);
+            pInputs[moveIndex].input.ki.dwExtraInfo = sendInputExtraInfo();
         }
         if (logger.isTraceEnabled()) {
             logger.trace("Sending " + moves + ", triggerKeyRepeating = " + triggerKeyRepeating);
@@ -365,6 +377,7 @@ public class WindowsKeyboard {
             pInputs[downIndex].input.ki.wVk = new WinDef.WORD(0);
             pInputs[downIndex].input.ki.wScan = new WinDef.WORD(c);
             pInputs[downIndex].input.ki.dwFlags = new WinDef.DWORD(WinUser.KEYBDINPUT.KEYEVENTF_UNICODE);
+            pInputs[downIndex].input.ki.dwExtraInfo = sendInputExtraInfo();
             // Key up.
             pInputs[upIndex].type = new WinDef.DWORD(WinUser.INPUT.INPUT_KEYBOARD);
             pInputs[upIndex].input.setType(WinUser.KEYBDINPUT.class);
@@ -373,6 +386,7 @@ public class WindowsKeyboard {
             pInputs[upIndex].input.ki.dwFlags = new WinDef.DWORD(
                     WinUser.KEYBDINPUT.KEYEVENTF_UNICODE |
                     WinUser.KEYBDINPUT.KEYEVENTF_KEYUP);
+            pInputs[upIndex].input.ki.dwExtraInfo = sendInputExtraInfo();
         }
         User32.INSTANCE.SendInput(new WinDef.DWORD(inputCount), pInputs,
                 pInputs[0].size());
@@ -388,6 +402,7 @@ public class WindowsKeyboard {
         if (extendedKey)
             flags |= WinUser.KEYBDINPUT.KEYEVENTF_EXTENDEDKEY;
         pInputs[0].input.ki.dwFlags = new WinDef.DWORD(flags);
+        pInputs[0].input.ki.dwExtraInfo = sendInputExtraInfo();
         User32.INSTANCE.SendInput(new WinDef.DWORD(1), pInputs,
                 pInputs[0].size());
     }

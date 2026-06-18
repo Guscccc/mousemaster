@@ -369,11 +369,13 @@ public class WindowsPlatform implements Platform {
                     KeyEvent keyEvent = buildKeyEvent(info, wParam, altgrLeftctrl);
                     boolean injected = (info.flags & ExtendedUser32.LLKHF_INJECTED) ==
                                        ExtendedUser32.LLKHF_INJECTED;
+                    boolean mousemasterInjected =
+                            injected && WindowsKeyboard.isMousemasterSendInput(info);
                     logger.trace("Reentrant keyboard hook callback, skipping KeyboardManager: " +
                                 keyEventString(info, wParamString(wParam), keyEvent, injected, altgrLeftctrl));
                     WindowsKeyboard.keyboardHookCallback(info, wParam, null,
-                            keyEvent, injected, altgrLeftctrl);
-                    if (injected && keyEvent != null) {
+                            keyEvent, mousemasterInjected, altgrLeftctrl);
+                    if (mousemasterInjected && keyEvent != null) {
                         if (WindowsKeyboard.shouldSuppressExternalLeftalt(keyEvent, true)) {
                             logger.trace("Suppressing external +leftalt (reentrant)");
                             return new WinDef.LRESULT(1);
@@ -381,12 +383,9 @@ public class WindowsPlatform implements Platform {
                         trackNotEatenKey(keyEvent);
                     }
                     // Queue for deferred KeyboardManager state tracking, applying the
-                    // same filters as the normal path: skip injected events (already
-                    // acknowledged above), skip duplicate alt, skip unmapped keys.
-                    if (!injected &&
-                        !(info.vkCode == WindowsVirtualKey.VK_LMENU.virtualKeyCode &&
-                          (info.flags & 0b10000) == 0b10000) &&
-                        keyEvent != null) {
+                    // same filters as the normal path: skip Mousemaster-injected
+                    // events (already acknowledged above) and unmapped keys.
+                    if (!mousemasterInjected && keyEvent != null) {
                         // If this is a repeat press for a key that was originally eaten,
                         // eat it here too. Otherwise CallNextHookEx would let it leak
                         // to the app (the reentrant handler cannot call processKeyEvent
@@ -425,10 +424,12 @@ public class WindowsPlatform implements Platform {
                                                     info.scanCode == 0x21d;
                             KeyEvent keyEvent = buildKeyEvent(info, wParam, altgrLeftctrl);
                             boolean injected = (info.flags & ExtendedUser32.LLKHF_INJECTED) == ExtendedUser32.LLKHF_INJECTED;
+                            boolean mousemasterInjected =
+                                    injected && WindowsKeyboard.isMousemasterSendInput(info);
                             logKeyEvent(info, wParamString, keyEvent, injected, altgrLeftctrl);
                             WindowsKeyboard.keyboardHookCallback(info, wParam, wParamString,
-                                    keyEvent, injected, altgrLeftctrl);
-                            if (injected) {
+                                    keyEvent, mousemasterInjected, altgrLeftctrl);
+                            if (mousemasterInjected) {
                                 if (keyEvent != null) {
                                     if (WindowsKeyboard.shouldSuppressExternalLeftalt(keyEvent, true)) {
                                         logger.trace("Suppressing external +leftalt");
@@ -437,10 +438,6 @@ public class WindowsPlatform implements Platform {
                                     else
                                         trackNotEatenKey(keyEvent);
                                 }
-                            }
-                            else if (info.vkCode == WindowsVirtualKey.VK_LMENU.virtualKeyCode &&
-                                (info.flags & 0b10000) == 0b10000) {
-                                // 0b10000 means alt is pressed. This avoids getting two consecutive duplicate alt press,release events.
                             }
                             else {
                                 if (keyEvent != null) {

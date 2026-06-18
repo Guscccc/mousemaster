@@ -470,6 +470,8 @@ public enum WindowsVirtualKey {
     }
 
     public static Key keyFromWindowsEvent(WindowsVirtualKey windowsVirtualKey, int scanCode, int flags) {
+        if (windowsVirtualKey == VK_MENU)
+            return (flags & 0x1) != 0 ? Key.rightalt : Key.leftalt;
         if (scanCode == 0) {
             // Injected key event have scanCode 0.
             return WindowsVirtualKey.activeKeyboardLayout().keyFromVirtualKey(windowsVirtualKey);
