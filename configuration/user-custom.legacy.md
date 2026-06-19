@@ -13,19 +13,18 @@
 
 ## Normal Mode (hold _alt_ then press _e_, or hold _alt_ then press _capslock_)
 
-- Press mouse buttons with _m_ (left button), _,_ (middle button), _._ (right button).
+- Press mouse buttons with _j_ (left button), _k_ (middle button), _l_ (right button).
 - Toggle left mouse button with _n_.
-- Click then deactivate with _b_.
-- Scroll vertically with _j_ (down) and _k_ (up).
-- Scroll horizontally with _h_ (left) and _l_ (right).
+- Left click then deactivate with _,_.
+- Scroll vertically or horizontally (wheel) with _m_, _._, _u_, _o_.
 - Jump forward (teleport) by holding _'_ while moving.
 - Slow down mouse and scroll movement by holding _capslock_ or _;_ while moving.
 - Super slow down mouse and scroll movement by holding _shift_ or _/_ while moving.
-- Accelerate mouse and scroll movement by holding _tab_, _p_, or _v_. _Ctrl_ shortcuts, _Alt + Tab_, and _Win + Tab_ are passed through.
+- Accelerate mouse and scroll movement by holding _tab_, _p_, _v_, or _b_. _Ctrl_ shortcuts, _Alt + Tab_, and _Win + Tab_ are passed through.
 
 ## Key remappings
 - Press _alt + ijkl_ to simulate the arrow keys.
-- Navigate back and forward using _t_ (back) and _y_ (forward). These keys send 
+- Navigate back and forward using _h_ (back) and _y_ (forward). These keys send 
 _leftalt + leftarrow_ (for back) and _leftalt + rightarrow_ (for forward) to the active application. 
 
 ## Grid Mode (_g_ in normal mode)
