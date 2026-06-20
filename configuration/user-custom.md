@@ -21,7 +21,7 @@
 - Jump forward (teleport) by holding _'_ while moving.
 - Slow down mouse and scroll movement by holding _capslock_ or _;_ while moving.
 - Super slow down mouse and scroll movement by holding _shift_ or _/_ while moving.
-- Accelerate mouse and scroll movement by holding _tab_, _p_, or _v_. _Ctrl_ shortcuts, _Alt + Tab_, and _Win + Tab_ are passed through.
+- Accelerate mouse and scroll movement by holding _tab_, _p_, or _v_. _Ctrl_ shortcuts, _Alt + Tab_, _Win + Tab_, _Shift + Enter_, and _Win + Shift + S_ are passed through.
 
 ## Key remappings
 - Press _alt + ijkl_ to simulate the arrow keys.
